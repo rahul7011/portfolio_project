@@ -1,3 +1,5 @@
+
+{% load staticfiles %}
 <!doctype html>
 <html lang="en">
   <head>
@@ -36,15 +38,15 @@
   <body>
     <header>
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                    <a class="navbar-brand" href="#">Rahul Maurya</a>
+                    <a class="navbar-brand" href="{% url 'home' %}">Rahul Maurya</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                       <div class="navbar-nav ml-auto">
-                        <a class="nav-item nav-link active" href="#">Facebook <span class="sr-only">(current)</span></a>
-                        <a class="nav-item nav-link" href="#">Resume</a>
-                        <a class="nav-item nav-link" href="#">Blog</a>
+                        <a class="nav-item nav-link active" href="http://facebook.com" target="_blank">Facebook <span class="sr-only">(current)</span></a>
+                        <a class="nav-item nav-link" href="{% static 'resume.doc' %}" target="_blank">Resume</a>
+                        <a class="nav-item nav-link" href="{% url 'bloghome' %}" target="_blank">Blog</a>
                       </div>
                     </div>
                   </nav>
@@ -55,6 +57,7 @@
   <section class="jumbotron text-center">
     <div class="container">
       <h1 class="jumbotron-heading">Hey! I'm Rahul</h1>
+      <img class="img-fluid rounded pb-3" src="{% static 'owner.jpg' %}" width="30%" />
       <p class="lead text-muted">Here goes my intro,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean luctus auctor urna, quis ullamcorper enim aliquam quis. Phasellus sed lacinia turpis. Pellentesque pretium porta elit in vulputate. Duis in maximus ante, vel accumsan ex. Donec non interdum neque. Vestibulum gravida nibh id pulvinar ullamcorper. Sed condimentum ante id dignissim vestibulum. Morbi vitae dui non odio blandit bibendum. Mauris ut ipsum sed nisl rhoncus luctus ut vitae ante. Mauris tempor facilisis accumsan.<p>
         <a href="mailto:champrahul01@gmail.com" class="btn btn-danger my-2">Email me!</a>
       </p>
